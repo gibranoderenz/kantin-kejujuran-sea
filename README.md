@@ -46,9 +46,15 @@ The command will read through the `requirements.txt` file in the backend folder 
 
 In the backend folder (which contains a backend folder), make sure you have the `(env)` showing up and run the following command:
 
-<pre>python manage.py runserver</pre>
+<pre>python manage.py flush
+yes
+python manage.py runserver</pre>
 
-This will run the Django server and we will be able to access the API to communicate with the database.
+Before running the server, to clean the database we need to use the flush command. The we use runserver command. This will then run the Django server and we will be able to access the API to communicate with the database.
+
+We can also create a superuser to handle database tables from an admin panel (optional; see `See database tables` in `Usage`). To do this, we need to do the following:
+<pre>python manage.py createsuperuser
+... (the credentials)</pre>
 
 That is all for the backend side. Now on to React!
 
@@ -97,7 +103,7 @@ When we are done exploring, we can log out by clicking the red `Log Out` button 
 
 - See database tables
 
-Other than accessing the frontend, because we use Django, we get an admin panel with cool admin features. This helps to maintain the website (although there is no store keeper, in my opinion it's best to still have at least 1 superuser). The admin that exists is student ID 00000 with the password 123123aA (Disclaimer: use a safe password! This is only for demonstration purposes). 
+With the superuser (if we have created one), we can access the database tables from `localhost:8000/admin` and then entering the superuser credentials.
 
 ## Issues Encountered
 Still, the canteen has some areas that can be improved in the future, such as:
