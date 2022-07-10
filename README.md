@@ -1,5 +1,7 @@
 # Kantin Kejujuran
 
+![Screenshot 2022-07-10 231707](https://user-images.githubusercontent.com/70869295/178153502-15ebc100-c522-4780-bf57-480c90a08b02.png)
+
 ## About the Project
 Kantin Kejujuran is basically an online school canteen with honesty embraced in its operations. You can buy and sell items, and also store and withdraw money from the canteen's balance box (only after you register an account and log in).
 
@@ -56,7 +58,7 @@ This setup will be easier than the Django side.
 
 1. Install React project dependencies
 
-Close the terminal, and open a terminal again in the root directory of the project (kantin-kejujuran-sea). Next, run the following commands to install the React dependencies needed for this project:
+Open a new terminal in the root directory of the project (kantin-kejujuran-sea). Make sure not to close the terminal where we used the command `python manage.py runserver`. Next, run the following commands to install the React dependencies needed for this project:
 
 <pre>cd frontend
 npm install</pre>
@@ -92,6 +94,10 @@ After buying a product, we will be redirected to the Kotak Uang page. There, we 
 If we are the seller, we can choose to withdraw money with the `Ambil` button. We can then input the amount of money we want to take.
 
 When we are done exploring, we can log out by clicking the red `Log Out` button at the navbar.
+
+- See database tables
+
+Other than accessing the frontend, because we use Django, we get an admin panel with cool admin features. This helps to maintain the website (although there is no store keeper, in my opinion it's best to still have at least 1 superuser). The admin that exists is student ID 00000 with the password 123123aA (Disclaimer: use a safe password! This is only for demonstration purposes). 
 
 ## Issues Encountered
 Still, the canteen has some areas that can be improved in the future, such as:
