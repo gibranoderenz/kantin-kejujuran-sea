@@ -4,8 +4,8 @@
 Kantin Kejujuran is basically an online school canteen with honesty embraced in its operations. You can buy and sell items, and also store and withdraw money from the canteen's balance box (only after you register an account and log in).
 
 ## Built With
-React (as the frontend)
-Django (as the backend)
+- React (as the frontend)
+- Django (as the backend)
 
 ## Prerequisites
 To run this project, you need the latest versions of:
@@ -16,7 +16,7 @@ To run this project, you need the latest versions of:
 In order to fully configure the project, there are a few steps.
 - Cloning the repo
 
-<pre>git clone ...</pre>
+<pre>git clone git@github.com:gooseguy88/kantin-kejujuran-sea.git</pre>
 
 - Setting up the backend
 1. In the root directory (kantin-kejujuran-sea), go to the backend folder and create a virtual environment. This will make things cleaner. To do so, we will need to run these commands:
