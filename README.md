@@ -13,7 +13,8 @@ To run this project, you need the latest versions of:
 - python (we need the pip command)
 
 ## Getting Started
-In order to fully configure the project, there are a few steps.
+In order to fully configure the project, there are a few steps needed to be taken. (Note: I used a Windows to build this project, so the commands will be based on what I used on Windows)
+
 - Cloning the repo
 
 <pre>git clone git@github.com:gooseguy88/kantin-kejujuran-sea.git</pre>
@@ -31,7 +32,7 @@ Next, we need to activate the environment.
 
 There should be a `(env)` at the start of our terminal directory, which means we can use pip to only manipulate the virtual environment, making things cleaner.
 
-2. Install Python dependencies.
+2. Install Python dependencies
 
 In the backend folder (which contains a backend folder), make sure you have the `(env)` showing up and run the following command:
 
@@ -55,7 +56,7 @@ This setup will be easier than the Django side.
 
 1. Install React project dependencies
 
-In the root directory of the project (kantin-kejujuran-sea), run the following commands:
+Close the terminal, and open a terminal again in the root directory of the project (kantin-kejujuran-sea). Next, run the following commands to install the React dependencies needed for this project:
 
 <pre>cd frontend
 npm install</pre>
@@ -66,7 +67,7 @@ In the frontend folder, run the following command:
 
 <pre>npm start</pre>
 
-And we are done for the setup! Now we can access Kantin Kejujuran and explore the features inside of it.
+And now the React app has started and we are done for the setup! We can then access Kantin Kejujuran and explore the features inside of it.
 
 I apologize for the long process. I was planning to deploy the project but wasn't able to do so in time.
 
