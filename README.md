@@ -9,6 +9,8 @@ Kantin Kejujuran is basically an online school canteen with honesty embraced in 
 - React (as the frontend)
 - Django (as the backend)
 
+React will communicate with the database through Django. Django will serve as an API for the database. The default configuration of the database from Django is SQLite3.
+
 ## Prerequisites
 To run this project, you need the latest versions of:
 - npm
