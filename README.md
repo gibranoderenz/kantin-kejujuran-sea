@@ -41,7 +41,7 @@ The command will read through the `requirements.txt` file in the backend folder 
 
 3. Run the Django server
 
-In the backend folder (which contains a backend folder), run the following command:
+In the backend folder (which contains a backend folder), make sure you have the `(env)` showing up and run the following command:
 
 <pre>python manage.py runserver</pre>
 
