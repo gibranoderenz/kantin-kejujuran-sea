@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Kantin Kejujuran
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About the Project
+Kantin Kejujuran is basically an online school canteen with honesty embraced in its operations. You can buy and sell items, and also store and withdraw money from the canteen's balance box (only after you register an account and log in).
 
-## Available Scripts
+## Built With
+React (as the frontend)
+Django (as the backend)
 
-In the project directory, you can run:
+## Prerequisites
+To run this project, you need the latest versions of:
+- npm
+- python (we need the pip command)
 
-### `npm start`
+## Getting Started
+In order to fully configure the project, there are a few steps.
+- Cloning the repo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<pre>git clone ...</pre>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Setting up the backend
+1. In the root directory (kantin-kejujuran-sea), go to the backend folder and create a virtual environment. This will make things cleaner. To do so, we will need to run these commands:
 
-### `npm test`
+<pre>cd backend
+pip install virtualenv
+virtualenv env</pre>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Next, we need to activate the environment.
 
-### `npm run build`
+<pre>env\scripts\activate</pre>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+There should be a `(env)` at the start of our terminal directory, which means we can use pip to only manipulate the virtual environment, making things cleaner.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install Python dependencies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In the backend folder (which contains a backend folder), make sure you have the `(env)` showing up and run the following command:
 
-### `npm run eject`
+<pre>pip install -r requirements.txt</pre>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The command will read through the `requirements.txt` file in the backend folder and install all the packages inside of it, and the installation directory will be inside the env folder.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Run the Django server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In the backend folder (which contains a backend folder), run the following command:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<pre>python manage.py runserver</pre>
 
-## Learn More
+This will run the Django server and we will be able to access the API to communicate with the database.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+That is all for the backend side. Now on to React!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Setting up the frontend
 
-### Code Splitting
+This setup will be easier than the Django side.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Install React project dependencies
 
-### Analyzing the Bundle Size
+In the root directory of the project (kantin-kejujuran-sea), run the following commands:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<pre>cd frontend
+npm install</pre>
 
-### Making a Progressive Web App
+2. Run the React app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+In the frontend folder, run the following command:
 
-### Advanced Configuration
+<pre>npm start</pre>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+And we are done for the setup! Now we can access Kantin Kejujuran and explore the features inside of it.
 
-### Deployment
+I apologize for the long process. I was planning to deploy the project but wasn't able to do so in time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Usage
+It is required to make an account and log in to it before accessing all the features of Kantin Kejujuran. To do so, we can hit the `Log In` button at the navbar and click on `Daftar di sini.`
+Next, we can add our details in the form, and register the account. Finally, we can log in and start our journey in the Kantin!
 
-### `npm run build` fails to minify
+- Add items to Kantin
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+At first, there won't be any products for sale. So we need to add one. Click on `Mau jadi penjual pertama?` and fill in the details of the product. Congratulations, we have added our first product in the Kantin!
+
+- Buy items in Kantin
+
+We can also buy items in the Kantin. It might be better to not let a seller buy their own products, but I think there are some use cases for that, so buying products you sell is allowed. :) We can do this by clicking on a product card and clicking on `Beli`.  This brings is to another feature of the Kantin.
+
+- Store money in Kotak Uang (canteen balance box)
+
+After buying a product, we will be redirected to the Kotak Uang page. There, we can either store money to the "box" or withdraw from it. In this case, we should store the money. Click on `Setor` and input a valid amount of money to be stored.
+
+- Withdraw money from Kotak Uang
+
+If we are the seller, we can choose to withdraw money with the `Ambil` button. We can then input the amount of money we want to take.
+
+When we are done exploring, we can log out by clicking the red `Log Out` button at the navbar.
+
+## Issues Encountered
+Still, the canteen has some areas that can be improved in the future, such as:
+- Reenforcing the way sellers can withdraw, because in the meantime there is no way of notifying the sellers that their products have been bought.
+- Making sure the frontend makes a request only once. If we inspect the browser and head to the Network panel, and then hit refresh, we will see that each request will be duplicated.
+- Being able to type certain endpoints directly from the search bar. For instance, if we haven't logged in and type `localhost:3000/daftar` manually to the search bar, we will be redirected to a 404 page (this is only if we haven't logged in). But if we go ahead and click the Log In button at the navbar and click `Daftar di sini`, we will successfully go to the Register page.
+- Being successful in passing user profile photo. My intention was to add a user photo attribute to the users, but I wasn't able to pass the data, so I passed on that feature.
+
+## Contact
+If there is anything unclear about the project, feel free to contact me through:
+- LINE (aglib_)
+- Instagram (@gibranoderenz)
+
+## Acknowledgements
+The animations I use are from lottiefiles.com. All other acknowledgements have been put in the comments of certain code snippets inside the source code.
+
+## End Note
+I would like to thank the Compfest SEA team for making this assignment, because I was pushed positively to learn new technologies. This build has been fun and I look forward to build more of these in the future. Any feedbacks will be accepted gladly.
